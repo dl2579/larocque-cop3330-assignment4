@@ -1,0 +1,13 @@
+@startuml
+class nameSorter {
+    +ArrayList<String> readInput()
+    +void sortAndPrint()
+}
+
+class App {
+    +void main()
+}
+
+App *- nameSorter
+
+@enduml
