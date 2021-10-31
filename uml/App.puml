@@ -1,13 +1,42 @@
 @startuml
-class nameSorter {
-    +ArrayList<String> readInput()
-    +void sortAndPrint()
-}
+
 
 class App {
+    ArrayList<toDoList> appLists
+    void start(Stage stage)
     +void main()
 }
 
-App *- nameSorter
+class AppController {
+    +void createList()
+    +void removeList()
+    +void editListTitle()
+    +void addItem()
+    +void editItem()
+    +void removeItem()
+    +void sortByComplete()
+    +void sortByIncomplete()
+}
+
+class Item {
+    +String description
+    +LocalDate dueDate
+    +Item(LocalDate dueDate, String description)
+    +String getDescription()
+    +void setDescription(String description)
+    +LocalDate getDate()
+    +setDate(LocalDate date)
+}
+
+class toDoList {
+    +String Title
+    +ArrayList<Items> listContent
+}
+
+toDoList *-- Item
+App *-- toDoList
+
+
+
 
 @enduml

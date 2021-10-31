@@ -1,16 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="ucf.assignments.AppController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<SplitPane dividerPositions="0.5" prefHeight="385.0" prefWidth="832.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.AppController">
+   <items>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="383.0" prefWidth="606.0">
+         <items>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="98.0" prefWidth="411.0">
+               <children>
+                  <TextField fx:id="itemField" layoutX="7.0" layoutY="15.0" prefHeight="25.0" prefWidth="128.0" promptText="Enter List Title" />
+                  <Button fx:id="addItem" layoutX="146.0" layoutY="15.0" mnemonicParsing="false" text="Create List" />
+                  <Separator layoutX="585.0" layoutY="-59.0" orientation="VERTICAL" prefHeight="200.0" />
+                  <TextField fx:id="itemField2" layoutX="71.0" layoutY="58.0" prefHeight="25.0" prefWidth="128.0" promptText="Enter New List Title" />
+                  <Button fx:id="addItem2" layoutX="209.0" layoutY="58.0" mnemonicParsing="false" text="Edit" />
+                  <Button fx:id="addItem21" layoutX="253.0" layoutY="58.0" mnemonicParsing="false" text="Remove List" />
+                  <Separator layoutY="49.0" prefHeight="3.0" prefWidth="417.0" />
+               </children>
+            </AnchorPane>
+            <ListView prefHeight="200.0" prefWidth="283.0" />
+         </items>
+      </SplitPane>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="271.0" prefWidth="700.0">
+         <items>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="152.0" prefWidth="696.0">
+               <children>
+                  <DatePicker fx:id="datePicker1" layoutX="344.0" layoutY="16.0" prefHeight="25.0" prefWidth="112.0" promptText="Due Date" />
+                  <TextField fx:id="descriptionText1" layoutX="96.0" layoutY="16.0" prefHeight="25.0" prefWidth="230.0" promptText="Add Description" />
+                  <TextField fx:id="itemField1" layoutX="14.0" layoutY="16.0" prefHeight="25.0" prefWidth="72.0" promptText="Item" />
+                  <Button fx:id="addItem1" layoutX="475.0" layoutY="13.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="81.0" text="Add item">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="descriptionText11" layoutX="16.0" layoutY="110.0" prefHeight="25.0" prefWidth="310.0" promptText="Edit Description" />
+                  <TextArea layoutX="14.0" layoutY="62.0" prefHeight="37.0" prefWidth="207.0" text="Selected item: abc&#10;Item status: completed" />
+                  <DatePicker fx:id="datePicker11" layoutX="344.0" layoutY="110.0" prefHeight="25.0" prefWidth="112.0" promptText="Edit Due Date" />
+                  <Button fx:id="addItem11" layoutX="236.0" layoutY="65.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="90.0" text="Complete">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="addItem111" layoutX="344.0" layoutY="65.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="112.0" text="Not complete">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="addItem112" layoutX="470.0" layoutY="65.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="90.0" text="Remove">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="addItem1121" layoutX="470.0" layoutY="107.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="90.0" text="Edit">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Separator layoutY="56.0" prefHeight="3.0" prefWidth="702.0" />
+                  <MenuButton layoutX="572.0" layoutY="16.0" mnemonicParsing="false" text="MenuButton">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                      <MenuItem mnemonicParsing="false" text="Action 2" />
+                    </items>
+                  </MenuButton>
+               </children>
+            </AnchorPane>
+            <ListView fx:id="itemList1" prefHeight="200.0" prefWidth="887.0" />
+         </items>
+      </SplitPane>
+   </items>
+</SplitPane>
