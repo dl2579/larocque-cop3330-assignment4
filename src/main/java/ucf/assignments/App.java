@@ -23,5 +23,7 @@ public class App extends Application {
 
     public static void main(String[] args) {
         launch();
+        //Create ArrayList<toDoList> appLists for storing toDoLists
+        //Rest of Pseudocode is in AppController.java
     }
 }

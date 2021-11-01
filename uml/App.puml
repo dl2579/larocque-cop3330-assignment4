@@ -11,16 +11,26 @@ class AppController {
     +void createList()
     +void removeList()
     +void editListTitle()
+
     +void addItem()
     +void editItem()
     +void removeItem()
+    +void editDueDate()
+    +void markComplete()
+
     +void sortByComplete()
     +void sortByIncomplete()
+
+    +void saveAllItemToExtern()
+    +void saveAllListsToExtern()
+    +void loadSingleList()
+    +void loadMultipleList()
 }
 
 class Item {
     +String description
     +LocalDate dueDate
+    +bool Complete
     +Item(LocalDate dueDate, String description)
     +String getDescription()
     +void setDescription(String description)
